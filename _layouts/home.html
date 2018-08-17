@@ -9,7 +9,9 @@ layout: default
   <div class="two-column full-height">
     <div class="first-column">
       <h2>
-        {{site.posts}}
+        {% for post in site.posts %}
+            {{ post.content }}
+          {% endfor %}
       </h2>
 
     </div>
