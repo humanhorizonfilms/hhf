@@ -4,7 +4,3 @@
 
 layout: home
 ---
-{%- include intro.html -%}
-{%- include sect_2.html -%}
-{%- include clouds.html -%}
-{%- include video_grid.html -%}
