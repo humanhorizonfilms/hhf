@@ -61,7 +61,7 @@ height: 50vh;
 .grid {
 
 .video-container {
-  padding:0 5% 0 5%;
+  padding:5% 5% 0 5%;
 
   iframe {
     width: 100%;
@@ -87,8 +87,11 @@ height: 50vh;
   height: 280px;
 }
 
+.center {
+  width: 500px;
+}
+
 .two-column {
-  padding-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,12 +113,21 @@ height: 50vh;
     h2 {
       padding-left: 10px;
       padding-right: 10px;
-      color: white;
     }
   }
 }
 
-#sketch-holder {
+#white-text {
+  color: white;
+}
+
+.img-container {
+  width: 30%;
+  margin: auto;
+  padding-top: 50px;
+}
+
+#cloud-holder {
   position: absolute;
   z-index: -1;
 }
@@ -127,9 +139,18 @@ height: 50vh;
   position: absolute;
   width: 100%;
   overflow: hidden;
-  margin-top: 100vh;
+  margin-top: 85vh;
 }
+.bigmarquee {
+  background-color: black;
+  width: 100%;
+  overflow: hidden;
 
+  h1 {
+    color: white;
+    font-size: 70vh;
+  }
+}
 
 
 /**

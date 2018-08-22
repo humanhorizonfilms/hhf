@@ -1,1 +1,2 @@
 $('.marquee').marquee();
+$('.bigmarquee').marquee();
