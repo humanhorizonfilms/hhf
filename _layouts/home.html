@@ -22,35 +22,38 @@ layout: default
 
     </div>
     <div class="second-column">
-
-      <div class="bigmarquee">
-        <h1>
-          {% for post in site.categories.scrolling %}
-            {{ post.content }}
-          {% endfor %}
-        </h1>
+      <div class="vid-hideoverflow">
+        <video muted="muted" autoplay="autoplay" playsinline loop>
+          <source src="https://player.vimeo.com/external/286281208.hd.mp4?s=15d276c8c88d159274ea9967f18e0543163265dc&profile_id=174" type="video/mp4">
+        </video>
       </div>
-
-      <!-- <div id="window-holder"></div> -->
-      <!-- <img src="{{site.url}}/assets/images/img1.jpg" alt="">
-      <img src="{{site.url}}/assets/images/img2.jpg" alt=""> -->
     </div>
   </div>
-
-
 
     <div class="two-column full-height">
       <div class="first-column grid">
 
-        <div markdown=1 class="video-container">
+        <div class="video-container">
           {% for post in site.categories.column1-video1 %}
-            {{ post.content }}
+            <a href="{{ post.content }}" class='grid-vid' data-featherlight="iframe">
+              <div class="vid-cover">
+                <button class="play_button" data-vid="1"><p>PLAY</p></button>
+                <img id="vimeo-286109621" src="" alt="">
+              </div>
+            </a>
+            {{ post.title }}
           {% endfor %}
         </div>
 
         <div class="video-container">
           {% for post in site.categories.column1-video2 %}
-            {{ post.content }}
+            <a href="{{ post.content }}" class='grid-vid' data-featherlight="iframe">
+              <div class="vid-cover">
+                <button class="play_button" data-vid="1"><p>PLAY</p></button>
+                <img id="vimeo-285408465" src="" alt="">
+              </div>
+            </a>
+            {{ post.title }}
           {% endfor %}
         </div>
 
@@ -59,13 +62,24 @@ layout: default
 
         <div class="video-container">
           {% for post in site.categories.column2-video1 %}
-            {{ post.content }}
+            <a href="{{ post.content }}" class='grid-vid' data-featherlight="iframe">
+              <div class="vid-cover">
+                <button class="play_button" data-vid="1"><p>PLAY</p></button>
+                <img id="vimeo-285885237" src="" alt="">
+              </div>
+            </a>
+            {{ post.title }}
           {% endfor %}
         </div>
+
       </div>
     </div>
 
+
     <div class="two-column full-height">
+      <!-- <div  id="cloud-background">
+        <iframe src="https://player.vimeo.com/video/286275717" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div> -->
       <div  id="cloud-holder"></div>
       <div class="first-column half-wid-img">
         <!-- <img src="{{site.url}}/assets/images/img3.jpg" alt="">
@@ -82,6 +96,7 @@ layout: default
 
     <div class="one-column full-height">
       <div class="center">
+        <!-- <div id="window-holder"></div> -->
         <h2>
         {% for post in site.categories.description3 %}
           {{ post.content }}

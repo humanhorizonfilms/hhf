@@ -4,17 +4,14 @@
   {%- include head.html -%}
 
   <body>
-
     {%- include header.html -%}
-
     <div class="marquee">
-      <h1>
+
         {% for post in site.categories.scrolling %}
           {{ post.content }}
       {% endfor %}
-    </h1>
-  </div>
 
+  </div>
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -23,9 +20,5 @@
     </main>
 
     {%- include footer.html -%}
-
-<script src="{{site.url}}/assets/js/main.js" charset="utf-8"></script>
-<script src="{{site.url}}/assets/js/sketch.js" charset="utf-8"></script>
   </body>
-
 </html>
