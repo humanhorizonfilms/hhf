@@ -1,4 +1,20 @@
 /**
+ * cursor
+ */
+* {
+  cursor: none;
+}
+
+.cursor {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #000;
+  z-index: 1;
+}
+/**
  * Site header
  */
 .site-header {
@@ -6,9 +22,11 @@
   // Positioning context for the mobile navigation icon
   position: relative;
 }
+
 .fixed {
   position: fixed;
 }
+
 .center-item {
   width: 120px;
   margin: auto;
@@ -20,7 +38,6 @@
     height: auto;
   }
 }
-
 /**
  * footer
  */
@@ -29,32 +46,33 @@
   color: white;
 }
 
-.footer-center-height{
+.footer-center-height {
   padding: 30vh;
 }
 
 .footer {
-height: 50vh;
-
+  height: 50vh;
 }
-
 /**
  * home > intro
  */
+img {
+  width: 100%;
+}
 
-  img {
-    width: 100%;
-  }
-
-
- .full-height {
-   height: 100vh;
- }
+.full-height {
+  height: 100vh;
+}
 
 .grid {
-
-.video-container {
-  padding:5% 5% 0 5%;
+  .video-container {
+    padding: 5% 5% 0;
+  }
+}
+///////// custom play button
+.hide {
+  display: none;
+}
 
 .vid-cover {
   display: flex;
@@ -64,52 +82,42 @@ height: 50vh;
   .play_button {
     width: 100px;
     height: 40px;
-    border: .5px solid $light-gray;
+    border: 0;
     position: absolute;
-    background: rgba(0,0,0, 0.3);
+    background: rgba(0, 0, 0, 0.0);
 
     p {
       font-family: $base-font-family;
       color: $light-gray;
-      letter-spacing: 5px;
-    }
-
-    &:hover {
-      background: rgba(0,0,0, 0.7);
-
-      transition: all 500ms;
-      transition-property: all;
-      transition-duration: 500ms;
-      transition-timing-function: ease;
-      transition-delay: 0s;
+      letter-spacing: 2px;
+      font-size: 18px;
+      height: 22px;
     }
   }
 }
-  }
-}
-
 
 .featherlight .featherlight-inner {
-  width: 700px;
-  height: 394px;
+  width: 910px;
+  height: 512px;
 }
-
 
 .half-wid-img {
   img {
     max-width: 50%;
   }
 }
-
 //////// marquee
-
 .marquee {
   height: 100px;
   position: absolute;
   width: 100%;
   overflow: hidden;
-  margin-top: 92vh;
+  margin-top: 90vh;
+  @include media-query($on-palm) {
+    margin-top: 70vh;
+  }
 }
+
 .bigmarquee {
   background-color: black;
   width: 100%;
@@ -120,26 +128,30 @@ height: 50vh;
     font-size: 70vh;
   }
 }
-
-
-
+// hide sections
+.animate {
+  opacity: 0;
+}
 //////// one column
-
 .one-column {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.center-column {
-  width: 500px;
-  height: 280px;
+.center-intro-vid {
+  width: 70%;
+  height: 390px;
 
-    iframe {
-      margin: auto;
-      width:100%;
-      height:100%;
-    }
+  iframe {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+  @include media-query($on-palm) {
+    width: 100%;
+    height: 300px;
+  }
 }
 
 .center {
@@ -149,6 +161,12 @@ height: 50vh;
     position: absolute;
     // z-index: -10;
   }
+  @include media-query($on-palm) {
+    h2 {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 }
 
 .img-container {
@@ -156,15 +174,15 @@ height: 50vh;
   margin: auto;
   padding-top: 50px;
 }
-
-
 //////// two column
-
 .two-column {
-  margin-top: 10vh;
+  // margin-top: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  @include media-query($on-palm) {
+    display: inline;
+  }
 
   #cloud-background {
     width: 100%;
@@ -175,80 +193,99 @@ height: 50vh;
   #cloud-holder {
     position: absolute;
     z-index: -5;
+    @include media-query($on-palm) {
+      height: 50%;
+      overflow-y: hidden;
+    }
+  }
+
+  .click {
+    cursor: url('assets/images/click.png'), auto;
+  }
+
+  .vid-tall-loop {
+    height: 80vh;
+    overflow: hidden;
+  }
+
+  .vid-short-loop {
+    height: 30vh;
+    overflow: hidden;
+    width: 70%;
+
+    video {
+      width: 150%;
+    }
   }
 
   .first-column {
     width: 50%;
     flex-grow: 1;
-
+    @include media-query($on-palm) {
+      width: 100%;
+    }
 
     h2 {
       padding-left: 10px;
       padding-right: 10px;
+      @include media-query($on-palm) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
   }
+
   .second-column {
     width: 50%;
     flex-grow: 1;
+    @include media-query($on-palm) {
+      width: 100%;
+    }
 
     #white-text {
       color: white;
     }
 
-    .vid-hideoverflow {
-      height: 80vh;
-      overflow: hidden;
-
-      #iframe-container {
-        height: 80vh;
-
-        iframe {
-        }
-      }
-    }
-
     h2 {
       padding-left: 10px;
       padding-right: 10px;
+      @include media-query($on-palm) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
   }
 }
-
-
-
-
-/**
- * Page content
- */
-.page-content {
-  flex: 1;
-}
-
-.page-heading {
-  @include relative-font-size(2);
-}
-
-.post-list-heading {
-  @include relative-font-size(1.75);
-}
-
-.post-list {
-  margin-left: 0;
-  list-style: none;
-
-  > li {
-    margin-bottom: $spacing-unit;
+/////// MOBILE
+.marginbottom {
+  margin-bottom: 0;
+  @include media-query($on-palm) {
+    margin-bottom: 20%;
   }
 }
 
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
+.margintop {
+  margin-top: 0;
+  @include media-query($on-palm) {
+    margin-top: 20%;
+  }
+}
+.margintop-50 {
+  margin-top: 0;
+  @include media-query($on-palm) {
+    margin-top: 50%;
+  }
 }
 
-.post-link {
-  display: block;
-  @include relative-font-size(1.5);
+.mobile-hide {
+  @include media-query($on-palm) {
+    display: none;
+  }
+}
+  @include media-query($on-palm) {
+    #email {
+    font-size: 18px;
+  }
 }
 /**
  * Posts
@@ -263,30 +300,5 @@ height: 50vh;
   line-height: 1;
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
-  }
-}
-
-.post-content {
-  margin-bottom: $spacing-unit;
-
-  h2 {
-    @include relative-font-size(2);
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
-    }
-  }
-
-  h3 {
-    @include relative-font-size(1.625);
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
-    }
-  }
-
-  h4 {
-    @include relative-font-size(1.25);
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
-    }
   }
 }

@@ -4,16 +4,30 @@ layout: default
 
 <div class="home">
 
-  <div class="one-column full-height">
-    <div class="center-column">
+  <div class="one-column full-height ">
+    <div class="center-intro-vid">
 
-      <iframe class='lazy' src="https://player.vimeo.com/video/254956999" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <div class="video-container">
+        {% for post in site.categories.intro-video %}
+          <a href="{{ post.excerpt }}" class='grid-vid' data-featherlight="iframe">
+            <div class="vid-cover">
+              <button class="play_button">
+                <p>PLAY</p>
+                <img src="assets/images/hhf_mark_slash_web.png" alt="">
+              </button>
+              <img id="vimeo-286687853" src="" alt="">
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+
+      <!-- <iframe class="lazyload" src="https://player.vimeo.com/video/254956999" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
 
     </div>
   </div>
 
   <div class="two-column full-height">
-    <div class="first-column">
+    <div class="first-column marginbottom">
       <h2>
         {% for post in site.categories.description1 %}
             {{ post.content }}
@@ -22,7 +36,7 @@ layout: default
 
     </div>
     <div class="second-column">
-      <div class="vid-hideoverflow">
+      <div class="vid-tall-loop">
         <video muted="muted" autoplay="autoplay" playsinline loop>
           <source src="https://player.vimeo.com/external/286281208.hd.mp4?s=15d276c8c88d159274ea9967f18e0543163265dc&profile_id=174" type="video/mp4">
         </video>
@@ -30,27 +44,33 @@ layout: default
     </div>
   </div>
 
-    <div class="two-column full-height">
-      <div class="first-column grid">
+  <div class="two-column full-height">
+      <div class="first-column grid margintop">
 
-        <div class="video-container">
+        <div class="video-container lazyload animate">
           {% for post in site.categories.column1-video1 %}
-            <a href="{{ post.content }}" class='grid-vid' data-featherlight="iframe">
+            <a href="{{ post.excerpt }}" class='grid-vid' data-featherlight="iframe">
               <div class="vid-cover">
-                <button class="play_button" data-vid="1"><p>PLAY</p></button>
-                <img id="vimeo-286109621" src="" alt="">
+                <button class="play_button">
+                  <p>PLAY</p>
+                  <img src="assets/images/hhf_mark_slash_web.png" alt="">
+                </button>
+                <img class="lazyload" id="vimeo-286109621" src="" alt="">
               </div>
             </a>
             {{ post.title }}
           {% endfor %}
         </div>
 
-        <div class="video-container">
+        <div class="video-container lazyload animate">
           {% for post in site.categories.column1-video2 %}
-            <a href="{{ post.content }}" class='grid-vid' data-featherlight="iframe">
+            <a href="{{ post.excerpt }}" class='grid-vid' data-featherlight="iframe">
               <div class="vid-cover">
-                <button class="play_button" data-vid="1"><p>PLAY</p></button>
-                <img id="vimeo-285408465" src="" alt="">
+                <button class="play_button">
+                  <p>PLAY</p>
+                  <img src="assets/images/hhf_mark_slash_web.png" alt="">
+                </button>
+                <img class="lazyload" id="vimeo-285408465" src="" alt="">
               </div>
             </a>
             {{ post.title }}
@@ -58,16 +78,21 @@ layout: default
         </div>
 
       </div>
-      <div class="second-column grid">
+      <div class="second-column grid marginbottom">
 
-        <div class="video-container">
+        <div class="video-container lazyload animate">
           {% for post in site.categories.column2-video1 %}
-            <a href="{{ post.content }}" class='grid-vid' data-featherlight="iframe">
+            <a href="{{ post.excerpt }}" class='grid-vid' data-featherlight="iframe">
               <div class="vid-cover">
-                <button class="play_button" data-vid="1"><p>PLAY</p></button>
-                <img id="vimeo-285885237" src="" alt="">
+                <button class="play_button">
+                  <p>PLAY</p>
+                  <img src="assets/images/hhf_mark_slash_web.png" alt="">
+                </button>
+                <img class="lazyload" id="vimeo-285885237" src="" alt="">
               </div>
+
             </a>
+
             {{ post.title }}
           {% endfor %}
         </div>
@@ -75,17 +100,24 @@ layout: default
       </div>
     </div>
 
+  <div class="two-column full-height click">
+      <div class="lazyload" id="cloud-holder"></div>
 
-    <div class="two-column full-height">
-      <!-- <div  id="cloud-background">
-        <iframe src="https://player.vimeo.com/video/286275717" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div> -->
-      <div  id="cloud-holder"></div>
-      <div class="first-column half-wid-img">
+      <div class="first-column half-wid-img mobile-hide">
+        <div class="vid-short-loop animate">
+          <video muted="muted" autoplay="autoplay" playsinline loop>
+            <source class="lazyload" src="https://player.vimeo.com/external/286275717.sd.mp4?s=5e9b34ff1f2dfd6f831ed12c4840492cdd122ce0&profile_id=164" type="video/mp4">
+          </video>
+        </div>
+        <div class="vid-short-loop animate mobile-hide">
+          <video muted="muted" autoplay="autoplay" playsinline loop>
+            <source class="lazyload" src="https://player.vimeo.com/external/286275717.sd.mp4?s=5e9b34ff1f2dfd6f831ed12c4840492cdd122ce0&profile_id=164" type="video/mp4">
+          </video>
+        </div>
         <!-- <img src="{{site.url}}/assets/images/img3.jpg" alt="">
         <img src="{{site.url}}/assets/images/img3.jpg" alt=""> -->
       </div>
-      <div class="second-column">
+      <div class="second-column margintop-50">
         <h2 id='white-text'>
           {% for post in site.categories.description2 %}
           {{ post.content }}
@@ -94,7 +126,7 @@ layout: default
       </div>
     </div>
 
-    <div class="one-column full-height">
+  <div class="one-column full-height">
       <div class="center">
         <!-- <div id="window-holder"></div> -->
         <h2>

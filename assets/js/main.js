@@ -1,3 +1,48 @@
+
+///////////// custom cursor
+$(document)
+  .mousemove(function(e) {
+    $('.cursor')
+      .eq(0)
+      .css({
+        left: e.pageX,
+        top: e.pageY
+      });
+    // setTimeout(function() {
+    //   $('.cursor')
+    //     .eq(1)
+    //     .css({
+    //       left: e.pageX,
+    //       top: e.pageY
+    //     });
+    // }, 100);
+  })
+
+///////////// transition
+
+$(document).ready(function() {
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+
+        /* Check the location of each desired element */
+        $('.animate').each( function(i){
+
+            var bottom_of_object = $(this).offset().top + $(this).innerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).animate({'opacity':'1'},400);
+            }
+        });
+    });
+});
+
+///////////// lazyload
+lazyload();
+
 ///////////// p5js
 
 var bubbles = [];
@@ -6,16 +51,14 @@ var stormy_cloud;
 var clouds
 
 function preload(){
-  clouds = createVideo('assets/images/skybg.mp4')
+  clouds = loadImage('assets/images/skybg.png')
   wisp_cloud = loadImage('assets/images/addcloud.png')
 }
 
 function setup() {
   var cnv = createCanvas(windowWidth, windowHeight)
   cnv.parent('cloud-holder');
-  clouds.loop()
-  clouds.hide();
-  clouds.position(0,0);
+
 }
 
 function draw() {
@@ -50,8 +93,6 @@ class Cloud{
   move() {
     this.x = this.x --;
   }
-
-
   show() {
     push();
     imageMode(CENTER)
@@ -59,15 +100,12 @@ class Cloud{
     image(wisp_cloud, this.x, this.y, 100+this.width, 50+this.height)
     pop();
   }
-
-
   rain(){
     if(this.x > width+200){
       this.x = -100;
     }else{
       this.x += this.speed;
     }
-
     if(frameCount % 20 == 0){
       if(this.rand > 0.7){
         this.y--
@@ -76,6 +114,10 @@ class Cloud{
       }
     }
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 //////////// video thumbnail
 function vimeoLoadingThumb(id){
@@ -96,6 +138,7 @@ $(function() {
     vimeoLoadingThumb(286109621);
     vimeoLoadingThumb(285408465);
     vimeoLoadingThumb(285885237);
+    vimeoLoadingThumb(286687853);
 });
 
 //////////// marquee jquery

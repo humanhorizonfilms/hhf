@@ -107,7 +107,12 @@ h2 {
   font-weight: $base-font-weight;
   text-align: center;
   line-height: 47px;
-}
+  @include media-query($on-palm) {
+    font-size: 28px;
+    line-height: 37px;
+    }
+  }
+
 
 h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;

@@ -4,8 +4,10 @@
   {%- include head.html -%}
 
   <body>
+    <div class="cursor"></div>
+    <!-- <div class="cursor"></div> -->
     {%- include header.html -%}
-    <div class="marquee">
+    <div class="marquee animate">
 
         {% for post in site.categories.scrolling %}
           {{ post.content }}
