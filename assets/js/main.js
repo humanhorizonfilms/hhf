@@ -1,22 +1,22 @@
 
 ///////////// custom cursor
-$(document)
-  .mousemove(function(e) {
-    $('.cursor')
-      .eq(0)
-      .css({
-        left: e.pageX,
-        top: e.pageY
-      });
-    // setTimeout(function() {
-    //   $('.cursor')
-    //     .eq(1)
-    //     .css({
-    //       left: e.pageX,
-    //       top: e.pageY
-    //     });
-    // }, 100);
-  })
+// $(document)
+//   .mousemove(function(e) {
+//     $('.cursor')
+//       .eq(0)
+//       .css({
+//         left: e.pageX,
+//         top: e.pageY
+//       });
+//     // setTimeout(function() {
+//     //   $('.cursor')
+//     //     .eq(1)
+//     //     .css({
+//     //       left: e.pageX,
+//     //       top: e.pageY
+//     //     });
+//     // }, 100);
+//   })
 
 ///////////// transition
 
@@ -119,6 +119,7 @@ class Cloud{
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+
 //////////// video thumbnail
 function vimeoLoadingThumb(id){
     var url = "http://vimeo.com/api/v2/video/" + id + ".json?callback=showThumb";
@@ -142,7 +143,6 @@ $(function() {
 });
 
 //////////// marquee jquery
-
 $('.marquee').marquee({
    duration: 8000,
    gap: 10,
