@@ -1,4 +1,3 @@
-
 ///////////// custom cursor
 // $(document)
 //   .mousemove(function(e) {
@@ -27,7 +26,6 @@ $(document).ready(function() {
 
         /* Check the location of each desired element */
         $('.animate').each( function(i){
-
             var bottom_of_object = $(this).offset().top + $(this).innerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
 
@@ -69,13 +67,10 @@ function draw() {
     bubbles[i].move();
     bubbles[i].show();
     bubbles[i].rain();
-    // console.log(tidalVideo.duration());
-    // console.log(tidalVideo.time());
   }
 }
 
 function mousePressed(){
-  // let r = random(10, 50);
   let b = new Cloud(mouseX, mouseY);
   bubbles.push(b);
 }
@@ -121,31 +116,9 @@ function windowResized() {
 }
 
 //////////// video thumbnail
-// function vimeoLoadingThumb(id){
-//     var url = "https://vimeo.com/api/v2/video/" + id + ".json?callback=showThumb";
-//     var id_img = "#vimeo-" + id;
-//     var script = document.createElement( 'script' );
-//     script.type = 'text/javascript';
-//     script.src = url;
-//     $(id_img).before(script);
-// }
-//
-// function showThumb(data){
-//     var id_img = "#vimeo-" + data[0].id;
-//     $(id_img).attr('src',data[0].thumbnail_large);
-// }
-//
-// $(function() {
-//     vimeoLoadingThumb(286109621);
-//     vimeoLoadingThumb(285408465);
-//     vimeoLoadingThumb(285885237);
-//     vimeoLoadingThumb(286687853);
-// });
-
 $(document).ready(function() {
   $("img[data-vimeo-id]").each(function(index) {
     var vimeoId = $(this).data('vimeo-id');
-    // Endpoint: https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/
     $.getJSON('https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/' + vimeoId, {
         format: "json",
         width: "640"

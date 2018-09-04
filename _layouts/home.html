@@ -6,7 +6,6 @@ layout: default
 
   <div class="one-column full-height ">
     <div class="center-intro-vid">
-
       <div class="video-container">
         {% for post in site.categories.intro-video %}
           <a href="{{ post.excerpt }}" class='grid-vid' data-featherlight="iframe">
@@ -20,9 +19,6 @@ layout: default
           </a>
         {% endfor %}
       </div>
-
-      <!-- <iframe class="lazyload" src="https://player.vimeo.com/video/254956999" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-
     </div>
   </div>
 
@@ -103,19 +99,17 @@ layout: default
   <div class="two-column full-height click">
       <div class="lazyload" id="cloud-holder"></div>
 
-      <div class="first-column half-wid-img mobile-hide">
-        <div class="vid-short-loop animate">
+      <div class="first-column half-wid-img mobile-hide animate">
+        <div class="vid-short-loop">
           <video muted="muted" autoplay="autoplay" playsinline loop>
             <source class="lazyload" src="https://player.vimeo.com/external/286275717.sd.mp4?s=5e9b34ff1f2dfd6f831ed12c4840492cdd122ce0&profile_id=164" type="video/mp4">
           </video>
         </div>
-        <div class="vid-short-loop animate mobile-hide">
+        <div class="vid-short-loop mobile-hide">
           <video muted="muted" autoplay="autoplay" playsinline loop>
             <source class="lazyload" src="https://player.vimeo.com/external/286275717.sd.mp4?s=5e9b34ff1f2dfd6f831ed12c4840492cdd122ce0&profile_id=164" type="video/mp4">
           </video>
         </div>
-        <!-- <img src="{{site.url}}/assets/images/img3.jpg" alt="">
-        <img src="{{site.url}}/assets/images/img3.jpg" alt=""> -->
       </div>
       <div class="second-column margintop-50">
         <h2 id='white-text'>
@@ -128,7 +122,6 @@ layout: default
 
   <div class="one-column full-height">
       <div class="center">
-        <!-- <div id="window-holder"></div> -->
         <h2>
         {% for post in site.categories.description3 %}
           {{ post.content }}
