@@ -121,25 +121,39 @@ function windowResized() {
 }
 
 //////////// video thumbnail
-function vimeoLoadingThumb(id){
-    var url = "https://vimeo.com/api/v2/video/" + id + ".json?callback=showThumb";
-    var id_img = "#vimeo-" + id;
-    var script = document.createElement( 'script' );
-    script.type = 'text/javascript';
-    script.src = url;
-    $(id_img).before(script);
-}
+// function vimeoLoadingThumb(id){
+//     var url = "https://vimeo.com/api/v2/video/" + id + ".json?callback=showThumb";
+//     var id_img = "#vimeo-" + id;
+//     var script = document.createElement( 'script' );
+//     script.type = 'text/javascript';
+//     script.src = url;
+//     $(id_img).before(script);
+// }
+//
+// function showThumb(data){
+//     var id_img = "#vimeo-" + data[0].id;
+//     $(id_img).attr('src',data[0].thumbnail_large);
+// }
+//
+// $(function() {
+//     vimeoLoadingThumb(286109621);
+//     vimeoLoadingThumb(285408465);
+//     vimeoLoadingThumb(285885237);
+//     vimeoLoadingThumb(286687853);
+// });
 
-function showThumb(data){
-    var id_img = "#vimeo-" + data[0].id;
-    $(id_img).attr('src',data[0].thumbnail_large);
-}
-
-$(function() {
-    vimeoLoadingThumb(286109621);
-    vimeoLoadingThumb(285408465);
-    vimeoLoadingThumb(285885237);
-    vimeoLoadingThumb(286687853);
+$(document).ready(function() {
+  $("img[data-vimeo-id]").each(function(index) {
+    var vimeoId = $(this).data('vimeo-id');
+    // Endpoint: https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/
+    $.getJSON('https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/' + vimeoId, {
+        format: "json",
+        width: "640"
+      },
+      function(data) {
+        $("img[data-vimeo-id=" + vimeoId + "]").attr('src', data.thumbnail_url);
+      });
+  });
 });
 
 //////////// marquee jquery
