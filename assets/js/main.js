@@ -131,7 +131,7 @@ $(document).ready(function() {
 
 //////////// marquee jquery
 $('.marquee').marquee({
-   duration: 8000,
+   duration: 20000,
    gap: 10,
    delayBeforeStart: 0,
    direction: 'left',

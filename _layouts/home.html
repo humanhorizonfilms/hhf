@@ -4,19 +4,20 @@ layout: default
 
 <div class="home">
 
-  <div class="one-column full-height ">
+  <div class="one-column full-height-intro ">
     <div class="center-intro-vid">
       <div class="video-container">
         {% for post in site.categories.intro-video %}
-          <a href="{{ post.excerpt }}" class='grid-vid' data-featherlight="iframe">
+        {{ post.excerpt }}
+          <!-- <a href="{{ post.excerpt }}" class='grid-vid' data-featherlight="iframe">
             <div class="vid-cover">
               <button class="play_button">
                 <p>PLAY</p>
                 <img src="assets/images/hhf_mark_slash_web.png" alt="">
               </button>
-              <img data-vimeo-id="286687853" src="" alt="">
+              <img data-vimeo-id="286109621" src="" alt="">
             </div>
-          </a>
+          </a> -->
         {% endfor %}
       </div>
     </div>
