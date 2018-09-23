@@ -1,4 +1,4 @@
-///////////// custom cursor
+// /////////// custom cursor
 // $(document)
 //   .mousemove(function(e) {
 //     $('.cursor')
@@ -22,8 +22,7 @@ $(document).ready(function() {
 
 	setTimeout(function(){
 		$('body').addClass('loaded');
-		// $('h1').css('color','#222222');
-	}, 3000);
+	}, 2000);
 
 });
 
@@ -78,6 +77,10 @@ function draw() {
     bubbles[i].show();
     bubbles[i].rain();
   }
+  //
+  // if (frameCount % 1000 == 0) {
+  // background(0);
+  // }
 }
 
 function mousePressed(){
@@ -94,10 +97,7 @@ class Cloud{
     this.speed = random(0.5,1.5)
     this.rand = random(1);
   }
-
-  move() {
-    this.x = this.x --;
-  }
+  move() { this.x = this.x --; }
   show() {
     push();
     imageMode(CENTER)

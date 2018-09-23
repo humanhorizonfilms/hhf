@@ -4,20 +4,18 @@
   {%- include head.html -%}
 
   <body>
-
     <div class="box">
+      <div class="loading-background"></div>
       <div class="loading-bar"></div>
     </div>
 
 
     {%- include header.html -%}
     <div class="marquee animate">
-
         {% for post in site.categories.scrolling %}
           {{ post.content }}
-      {% endfor %}
-
-  </div>
+        {% endfor %}
+    </div>
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">

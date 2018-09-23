@@ -8,28 +8,37 @@ layout: default
     <div class="center-intro-vid">
       <div class="video-container">
         {% for post in site.categories.intro-video %}
-        {{ post.excerpt }}
+          <a href="{{ post.excerpt }}" class='grid-vid' data-featherlight="iframe">
+            <div class="vid-cover">
+              <button class="play_button">
+                <p>PLAY</p>
+                <img src="assets/images/hhf_mark_slash_web.png" alt="">
+              </button>
+              {{ post.content | remove: post.excerpt }}
+            </div>
+          </a>
+          {{ post.title }}
         {% endfor %}
       </div>
     </div>
   </div>
 
   <div class="two-column full-height">
+    {% for post in site.categories.description1 %}
     <div class="first-column marginbottom">
       <h2>
-        {% for post in site.categories.description1 %}
-            {{ post.content }}
-        {% endfor %}
+          {{ post.excerpt }}
       </h2>
 
     </div>
     <div class="second-column">
       <div class="vid-tall-loop">
         <video muted="muted" autoplay="autoplay" playsinline loop>
-          <source src="https://player.vimeo.com/external/286281208.hd.mp4?s=15d276c8c88d159274ea9967f18e0543163265dc&profile_id=174" type="video/mp4">
+          {{ post.content | remove: post.excerpt }}
         </video>
       </div>
     </div>
+    {% endfor %}
   </div>
 
   <div class="two-column full-height">
@@ -38,13 +47,15 @@ layout: default
         <div class="video-container lazyload animate">
           {% for post in site.categories.column1-video1 %}
             <a href="{{ post.excerpt }}" class='grid-vid' data-featherlight="iframe">
+
               <div class="vid-cover">
                 <button class="play_button">
                   <p>PLAY</p>
                   <img src="assets/images/hhf_mark_slash_web.png" alt="">
                 </button>
-                <img class="lazyload" data-vimeo-id="286109621" src="" alt="">
+                {{ post.content | remove: post.excerpt }}
               </div>
+
             </a>
             {{ post.title }}
           {% endfor %}
@@ -58,7 +69,7 @@ layout: default
                   <p>PLAY</p>
                   <img src="assets/images/hhf_mark_slash_web.png" alt="">
                 </button>
-                <img class="lazyload" data-vimeo-id="286109621" src="" alt="">
+                {{ post.content | remove: post.excerpt }}
               </div>
             </a>
             {{ post.title }}
@@ -76,7 +87,7 @@ layout: default
                   <p>PLAY</p>
                   <img src="assets/images/hhf_mark_slash_web.png" alt="">
                 </button>
-                <img class="lazyload" data-vimeo-id="286109621" src="" alt="">
+                {{ post.content | remove: post.excerpt }}
               </div>
 
             </a>
@@ -92,16 +103,18 @@ layout: default
       <div class="lazyload" id="cloud-holder"></div>
 
       <div class="first-column half-wid-img mobile-hide animate">
+        {% for post in site.categories.cloud-video %}
         <div class="vid-short-loop">
           <video muted="muted" autoplay="autoplay" playsinline loop>
-            <source class="lazyload" src="https://player.vimeo.com/external/286275717.sd.mp4?s=5e9b34ff1f2dfd6f831ed12c4840492cdd122ce0&profile_id=164" type="video/mp4">
+            <source class="lazyload" src="{{ post.content }}" type="video/mp4">
           </video>
         </div>
         <div class="vid-short-loop mobile-hide">
           <video muted="muted" autoplay="autoplay" playsinline loop>
-            <source class="lazyload" src="https://player.vimeo.com/external/286275717.sd.mp4?s=5e9b34ff1f2dfd6f831ed12c4840492cdd122ce0&profile_id=164" type="video/mp4">
+            <source class="lazyload" src="{{ post.content }}" type="video/mp4">
           </video>
         </div>
+        {% endfor %}
       </div>
       <div class="second-column margintop-50">
         <h2 id='white-text'>
