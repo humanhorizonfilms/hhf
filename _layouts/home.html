@@ -95,28 +95,41 @@ layout: default
             {{ post.title }}
           {% endfor %}
         </div>
+        <!-- <div class="video-container lazyload animate">
+          {% for post in site.categories.column2-video2 %}
+            <a href="{{ post.excerpt }}" class='grid-vid' data-featherlight="iframe">
+              <div class="vid-cover">
+                <button class="play_button">
+                  <p>PLAY</p>
+                  <img src="assets/images/hhf_mark_slash_web.png" alt="">
+                </button>
+                {{ post.content | remove: post.excerpt }}
+              </div>
+            </a>
+            {{ post.title }}
+          {% endfor %}
+        </div> -->
 
       </div>
     </div>
 
-  <div class="two-column full-height click">
-      <div class="lazyload" id="cloud-holder"></div>
-
-      <div class="first-column half-wid-img mobile-hide animate">
+  <div class="two-column full-height">
+      <div class="lazyload click" id="cloud-holder"></div>
+      <div class="first-column half-wid-img mobile-hide click">
         {% for post in site.categories.cloud-video %}
         <div class="vid-short-loop">
           <video muted="muted" autoplay="autoplay" playsinline loop>
             <source class="lazyload" src="{{ post.content }}" type="video/mp4">
           </video>
         </div>
-        <div class="vid-short-loop mobile-hide">
+        <div class="vid-short-loop mobile-hide click">
           <video muted="muted" autoplay="autoplay" playsinline loop>
             <source class="lazyload" src="{{ post.content }}" type="video/mp4">
           </video>
         </div>
         {% endfor %}
       </div>
-      <div class="second-column margintop-50">
+      <div class="second-column margintop-50 click">
         <h2 id='white-text'>
           {% for post in site.categories.description2 %}
           {{ post.content }}

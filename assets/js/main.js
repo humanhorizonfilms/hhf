@@ -18,21 +18,28 @@
 //   })
 
 
-$(document).ready(function() {
-
-	setTimeout(function(){
-		$('body').addClass('loaded');
-	}, 2000);
-
-});
+///////////// preloader
+// $(window).load(function() {
+// });
 
 ///////////// transition
 
 $(document).ready(function() {
+	$('.preloader').fadeOut('slow');
+
+	$("img[data-vimeo-id]").each(function(index) {
+    var vimeoId = $(this).data('vimeo-id');
+    $.getJSON('https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/' + vimeoId, {
+        format: "json",
+        width: "640"
+      },
+      function(data) {
+        $("img[data-vimeo-id=" + vimeoId + "]").attr('src', data.thumbnail_url);
+      });
+  });
 
     /* Every time the window is scrolled ... */
     $(window).scroll( function(){
-
         /* Check the location of each desired element */
         $('.animate').each( function(i){
             var bottom_of_object = $(this).offset().top + $(this).innerHeight();
@@ -45,10 +52,15 @@ $(document).ready(function() {
             }
         });
     });
+
+		setTimeout(function(){
+			$('body').addClass('loaded');
+		}, 2000);
+
 });
 
 ///////////// lazyload
-lazyload();
+// lazyload();
 
 ///////////// p5js
 
@@ -124,20 +136,6 @@ class Cloud{
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-
-//////////// video thumbnail
-$(document).ready(function() {
-  $("img[data-vimeo-id]").each(function(index) {
-    var vimeoId = $(this).data('vimeo-id');
-    $.getJSON('https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/' + vimeoId, {
-        format: "json",
-        width: "640"
-      },
-      function(data) {
-        $("img[data-vimeo-id=" + vimeoId + "]").attr('src', data.thumbnail_url);
-      });
-  });
-});
 
 //////////// marquee jquery
 $('.marquee').marquee({
