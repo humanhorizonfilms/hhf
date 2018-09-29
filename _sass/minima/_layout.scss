@@ -13,6 +13,7 @@
    background-size: 150px;
 }
 
+
 /**
  * Site header
  */
@@ -37,18 +38,13 @@
     width: 40vw;
     height: auto;
     @include media-query($on-palm) {
-      width: inherit;
+      width: 90vw;
     }
   }
 }
 /**
  * footer
  */
-.site-footer {
-  background-color: $black;
-  color: white;
-}
-
 .footer-center-height {
   padding: 30vh;
 }
@@ -56,30 +52,25 @@
 .footer {
   height: 50vh;
 }
+
 /**
  * home > intro
  */
-img {
-  width: 100%;
-}
+img { width: 100%;}
 
-.full-height {
-  height: 100vh;
-}
+.full-height { height: 100vh;}
 
-.full-height-intro {
-  height: 90vh;
-}
+.full-height-intro { height: 90vh;}
 
 .grid {
-  .video-container {
-    padding: 5% 5% 0;
+  .video-container { padding: 5% 5% 0;
+    .video-title {
+      padding-top: 10px;
+    }
   }
 }
 ///////// custom play button
-.hide {
-  display: none;
-}
+.hide {display: none;}
 
 .vid-cover {
   display: flex;
@@ -110,8 +101,12 @@ img {
 }
 
 .featherlight-iframe .featherlight-content {
-  width: 100vw !important;
-  height: 70vh !important;
+  width: 900px !important;
+  height: 506px !important;
+  @include media-query($on-tablet) {
+    width: 100vw !important;
+    height: 48vh !important;
+  }
   background: transparent !important;
 }
 
@@ -132,7 +127,7 @@ img {
   position: absolute;
   width: 100%;
   overflow: hidden;
-  margin-top: 90vh;
+  margin-top: 80vh;
   @include media-query($on-palm) {
     margin-top: 70vh;
   }
@@ -160,7 +155,6 @@ img {
 }
 
 .center-intro-vid {
-
   @include media-query($on-palm) {
     width: 100%;
     height: 300px;
@@ -169,10 +163,8 @@ img {
 
 .center {
   width: 500px;
-
   #window-holder {
     position: absolute;
-    // z-index: -10;
   }
   @include media-query($on-palm) {
     h2 {
@@ -227,9 +219,9 @@ img {
   }
 
   .vid-short-loop {
-    height: 30vh;
+    // height: 30vh;
     overflow: hidden;
-    width: 70%;
+    // width: 70%;
 
     video {
       width: 150%;
@@ -316,7 +308,7 @@ img {
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
-  @include media-query($on-laptop) {
+  @include media-query($on-tablet) {
     @include relative-font-size(2.25);
   }
 }

@@ -28,7 +28,7 @@ body {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
-  display: flex;
+  display: none;
   min-height: 100vh;
   flex-direction: column;
   overflow-x: hidden;
@@ -201,7 +201,7 @@ pre {
   // padding-left: $spacing-unit;
   @extend %clearfix;
 
-  @include media-query($on-laptop) {
+  @include media-query($on-tablet) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     // padding-right: $spacing-unit / 2;
