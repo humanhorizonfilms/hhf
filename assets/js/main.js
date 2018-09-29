@@ -60,7 +60,7 @@ var clouds
 function setup() {
 	clouds = loadImage('assets/images/skybg.jpg')
 	wisp_cloud = loadImage('assets/images/addcloud.png')
-	var cnv = createCanvas(windowWidth-100, windowHeight-100)
+	var cnv = createCanvas(windowWidth, windowHeight)
 	cnv.parent('cloud-holder');
 
 }
@@ -74,7 +74,7 @@ function draw() {
 		bubbles[i].show();
 		bubbles[i].rain();
 	}
-	//
+	
 	// if (frameCount % 1000 == 0) {
 	// background(0);
 	// }

@@ -45,6 +45,11 @@
 /**
  * footer
  */
+
+ .site-footer {
+   background-color: $black;
+   color:$light-gray;
+ }
 .footer-center-height {
   padding: 30vh;
 }
@@ -200,8 +205,11 @@ img { width: 100%;}
     cursor: pointer;
     position: absolute;
     z-index: -5;
+    max-width: 95vw;
+    overflow: hidden;
     @include media-query($on-palm) {
       height: 50%;
+      max-width: 100%;
       overflow-y: hidden;
     }
   }
