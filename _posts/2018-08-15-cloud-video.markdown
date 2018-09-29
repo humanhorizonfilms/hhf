@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ""
+title:  "Double Cloud Video"
 date:   2018-08-15 19:58:04 -0500
 published: true
 categories: cloud-video

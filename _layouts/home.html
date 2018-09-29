@@ -17,7 +17,6 @@ layout: default
               {{ post.content | remove: post.excerpt }}
             </div>
           </a>
-          {{ post.title }}
         {% endfor %}
       </div>
     </div>
@@ -89,27 +88,10 @@ layout: default
                 </button>
                 {{ post.content | remove: post.excerpt }}
               </div>
-
             </a>
-
             {{ post.title }}
           {% endfor %}
         </div>
-        <!-- <div class="video-container lazyload animate">
-          {% for post in site.categories.column2-video2 %}
-            <a href="{{ post.excerpt }}" class='grid-vid' data-featherlight="iframe">
-              <div class="vid-cover">
-                <button class="play_button">
-                  <p>PLAY</p>
-                  <img src="assets/images/hhf_mark_slash_web.png" alt="">
-                </button>
-                {{ post.content | remove: post.excerpt }}
-              </div>
-            </a>
-            {{ post.title }}
-          {% endfor %}
-        </div> -->
-
       </div>
     </div>
 
