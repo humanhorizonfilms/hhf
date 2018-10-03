@@ -23,9 +23,9 @@ layout: default
   </div>
 
   <div class="two-column full-height">
-    {% for post in site.categories.description1 %}
+    <!-- {% for post in site.categories.description1 %} -->
     <div class="first-column marginbottom">
-      <h2>{{ post.excerpt }}</h2>
+      <h2>{{ site.description-p1 }}</h2>
     </div>
     <div class="second-column">
       <div class="vid-tall-loop">
@@ -34,7 +34,7 @@ layout: default
         </video>
       </div>
     </div>
-    {% endfor %}
+    <!-- {% endfor %} -->
   </div>
 
   <div class="two-column full-height">
@@ -104,9 +104,7 @@ layout: default
       </div>
       <div class="second-column margintop-50 click">
         <h2 id='white-text'>
-          {% for post in site.categories.description2 %}
-          {{ post.content }}
-          {% endfor %}
+          {{ site.description-p2 }}
         </h2>
       </div>
     </div>
@@ -114,9 +112,7 @@ layout: default
   <div class="one-column full-height">
       <div class="center">
         <h2>
-        {% for post in site.categories.description3 %}
-          {{ post.content }}
-        {% endfor %}
+        {{ site.description-p3 }}
         </h2>
         <div class="img-container">
           <img src="{{site.url}}/assets/images/hhf_mark_circle_web.png" alt="">
