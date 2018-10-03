@@ -8,13 +8,14 @@ collections:
   uploads:
     title: Uploads
     output: true
-email: hello@humanhorizonfilms.com
+email: tahiel@humanhorizonfilms.com
 description-p1: We empower organizations to express their service stories with emotionally
   rich filmmaking.
 description-p2: We believe in sharing the stories of those who serve and inspire others
   to serve others.
 description-p3: We believe climate of innovation, authenticity, and meaningful change
   happens at the intersection of many diverse voices.
+scrolling-text: people change stories change people change stories change
 baseurl: ''
 url: https://dearnaomichan.github.io/HHF/
 facebook: https://www.facebook.com/humanhorizonfilms

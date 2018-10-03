@@ -22,18 +22,16 @@ layout: default
     </div>
   </div>
 
-
-
 <!-- Water Section -->
   <div class="two-column full-height">
-    {% for post in site.categories.description1 %}
+    {% for post in site.categories.water-video %}
     <div class="first-column marginbottom">
       <h2>{{ site.description-p1 }}</h2>
     </div>
     <div class="second-column">
       <div class="vid-tall-loop">
         <video muted="muted" autoplay="autoplay" playsinline loop>
-          {{ post.excerpt }}
+          <source src="{{ post.excerpt }}" type="video/mp4">
         </video>
       </div>
     </div>
@@ -72,13 +70,11 @@ layout: default
       <div class="lazyload click mobile-cloud" id="cloud-holder"></div>
 
       <div class="first-column mobile-cloud half-wid-img click animate">
-        {% for post in site.categories.cloud-video %}
         <div class="vid-short-loop mobile-hide click">
           <video muted="muted" autoplay="autoplay" playsinline loop>
-            <source class="lazyload" src="{{ post.content }}" type="video/mp4">
+            <source class="lazyload" src="https://player.vimeo.com/external/286275717.sd.mp4?s=5e9b34ff1f2dfd6f831ed12c4840492cdd122ce0&profile_id=164" type="video/mp4">
           </video>
         </div>
-        {% endfor %}
       </div>
       <div class="second-column mobile-cloud click">
         <h2 id='white-text'>

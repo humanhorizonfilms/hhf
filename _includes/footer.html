@@ -5,13 +5,7 @@
     <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
       <div class="one-column footer">
         <div class="footer-center">
-          {%- if site.email -%}
-        <h2 id='email'>
-          {% for post in site.categories.contact %}
-            {{ post.content }}
-          {% endfor %}
-        </h2>
-          {%- endif -%}
+        <h2 id='email'>{{ site.email }}</h2>
         </div>
       </div>
   </div>
