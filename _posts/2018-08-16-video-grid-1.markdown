@@ -1,8 +1,8 @@
 ---
-title: Video 3 <br> 2018
+title: VIDEO 1 <br> 2018
 date: 2018-08-16 00:58:04 Z
 categories:
-- column2-video1
+- video-grid
 layout: post
 excerpt_separator: "<!--more-->"
 ---

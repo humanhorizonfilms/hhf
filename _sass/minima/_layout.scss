@@ -63,17 +63,23 @@
  */
 img { width: 100%;}
 
-.full-height { height: 100vh;}
-
-.full-height-intro { height: 90vh;}
-
-.grid {
-  .video-container { padding: 5% 5% 0;
-    .video-title {
-      padding-top: 10px;
-    }
+.full-height {
+  height: 100vh;
+  @include media-query($on-tablet) {
+    height: 70vh;
+  }
+  @include media-query($on-palm) {
+    height: 100vh;
   }
 }
+
+.full-height-intro {
+  height: 90vh;
+  @include media-query($on-tablet) {
+    height: 80vh;
+  }
+}
+
 ///////// custom play button
 .hide {display: none;}
 
@@ -100,6 +106,68 @@ img { width: 100%;}
   }
 }
 
+
+.half-wid-img {
+  img {
+    max-width: 50%;
+  }
+}
+
+////////// Video GRID
+
+@mixin cell-width($percentage) {
+	flex: 0 0 calc( #{$percentage * 100%} - #{$grid_spacing - ($grid_spacing * $percentage)} );
+}
+
+.grid-wrapper {
+  margin: 10% 0;
+
+  .grid {
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  	justify-content: space-between;
+
+    .cell {
+      flex: 1;
+    }
+  }
+}
+
+@media ( min-width: $on-tablet + 1px ) {
+	.grid {
+		display: flex;
+	}
+
+	.grid.grid-2-col .cell {
+		@include cell-width(0.5);
+		&.span-2 { flex: 0 0 100%; }
+	}
+
+  .cell:nth-child(even)  {
+    padding-top: 10%;
+  }
+}
+
+@media ( max-width: $on-tablet ) {
+	.grid-mobile.grid-mobile-2-col .cell {
+		@include cell-width(0.5);
+		&.span-2 { flex: 0 0 100%; }
+	}
+  .grid { padding-left: 10%; padding-right: 10%;
+    .cell {padding-bottom: 5%; }
+  }
+}
+
+@media ( max-width: $on-palm ) {
+}
+
+.video-title {
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+
+
+// Custom light box
 .featherlight .featherlight-inner {
   width: 100%;
   height: 100%;
@@ -120,12 +188,6 @@ img { width: 100%;}
   margin-right:0 !important;
 }
 
-
-.half-wid-img {
-  img {
-    max-width: 50%;
-  }
-}
 //////// marquee
 .marquee {
   height: 100px;
@@ -133,8 +195,13 @@ img { width: 100%;}
   width: 100%;
   overflow: hidden;
   margin-top: 80vh;
+  @include media-query($on-tablet) {
+    margin-top: 62vh;
+  }
   @include media-query($on-palm) {
-    margin-top: 70vh;
+    h1 {
+      font-size: 45px;
+    }
   }
 }
 
@@ -157,14 +224,18 @@ img { width: 100%;}
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.center-intro-vid {
-  @include media-query($on-palm) {
-    width: 100%;
-    height: 300px;
+  .center-intro-vid {
+    .video-container {
+      padding: 5% 5% 0;
+    }
+    @include media-query($on-palm) {
+      width: 100%;
+      height: 300px;
+    }
   }
 }
+
 
 .center {
   width: 500px;
@@ -185,6 +256,11 @@ img { width: 100%;}
   padding-top: 50px;
 }
 //////// two column
+.cloud.two-column {
+  @include media-query($on-palm) {
+    display: flex !important;
+  }
+}
 .two-column {
   // margin-top: 10vh;
   display: flex;
@@ -207,16 +283,18 @@ img { width: 100%;}
     z-index: -5;
     max-width: 95vw;
     overflow: hidden;
-    @include media-query($on-palm) {
+    @include media-query($on-tablet) {
       height: 50%;
       max-width: 100%;
       overflow-y: hidden;
     }
+    @include media-query($on-palm) {
+      display: none;
+    }
   }
 
-  .click {
-    cursor: pointer !important;
-  }
+
+  .click { cursor: pointer !important;}
 
   .vid-tall-loop {
     height: 80vh;
@@ -227,14 +305,15 @@ img { width: 100%;}
   }
 
   .vid-short-loop {
-    // height: 30vh;
     overflow: hidden;
-    // width: 70%;
-
     video {
       width: 150%;
+      @include media-query($on-palm) {
+        width: 250%;
+      }
     }
   }
+
 
   .first-column {
     width: 50%;
@@ -274,6 +353,18 @@ img { width: 100%;}
     }
   }
 }
+
+.second-column.mobile-cloud {
+  @include media-query($on-palm) {
+    position: absolute;
+  }
+}
+.first-column.mobile-cloud {
+  @include media-query($on-palm) {
+    position: absolute;
+  }
+}
+
 /////// MOBILE
 .marginbottom {
   margin-bottom: 0;
@@ -288,16 +379,11 @@ img { width: 100%;}
     margin-top: 20%;
   }
 }
-.margintop-50 {
-  margin-top: 0;
-  @include media-query($on-palm) {
-    margin-top: 50%;
-  }
-}
 
-.mobile-hide {
+
+.mobile-cloud {
   @include media-query($on-palm) {
-    display: none;
+    // display: none;
   }
 }
   @include media-query($on-palm) {

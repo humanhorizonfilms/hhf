@@ -31,6 +31,8 @@ $content-width:    1100px !default;
 $on-palm:          600px !default;
 $on-tablet:        800px !default;
 
+$grid_spacing: 25px;
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
