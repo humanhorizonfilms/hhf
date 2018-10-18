@@ -1,7 +1,10 @@
 ---
-layout: post
 title: Logo
-date: 2018-08-16 00:58:04 Z
-image: /assets/hhf_logo.png
-categories: logo
+date: 2018-08-16 00:58:00 Z
+published: false
+categories:
+- logo
+image: "/uploads/hhf_logo-3ee058.png"
+layout: post
 ---
+
