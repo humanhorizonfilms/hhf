@@ -121,7 +121,7 @@ img { width: 100%;}
 }
 
 .grid-wrapper {
-  margin: 10% 0;
+  margin:5% 0;
 
   .grid {
   	flex-direction: row;
@@ -195,7 +195,7 @@ img { width: 100%;}
   position: absolute;
   width: 100%;
   overflow: hidden;
-  margin-top: 76vh;
+  left: 0;
   @include media-query($on-tablet) {
     margin-top: 62vh;
   }
@@ -206,16 +206,6 @@ img { width: 100%;}
   }
 }
 
-.bigmarquee {
-  background-color: black;
-  width: 100%;
-  overflow: hidden;
-
-  h1 {
-    color: white;
-    font-size: 70vh;
-  }
-}
 // hide sections
 .animate {
   opacity: 0;

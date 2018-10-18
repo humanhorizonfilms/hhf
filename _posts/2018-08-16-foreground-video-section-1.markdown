@@ -8,6 +8,6 @@ excerpt_separator: "<!--more-->"
 ---
 
 {::nomarkdown}  
-https://player.vimeo.com/external/286281208.hd.mp4?s=15d276c8c88d159274ea9967f18e0543163265dc&profile_id=174
+https://player.vimeo.com/external/286281208.sd.mp4?s=6e943e18863952d29f7490534a8605b20ad566f2&profile_id=164
 {:/}  
 <!--more-->

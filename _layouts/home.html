@@ -3,7 +3,6 @@ layout: default
 ---
 
 <div class="home">
-
   <div class="one-column full-height-intro ">
     <div class="center-intro-vid">
       <div class="video-container">
@@ -22,6 +21,11 @@ layout: default
     </div>
   </div>
 
+<!-- Marquee - Scrolling Text -->
+  <div class="marquee animate">
+    <h2>{{ site.scrolling }}</h2>
+  </div>
+
 <!-- Water Section -->
   <div class="two-column full-height">
     <div class="background-video">
@@ -35,7 +39,7 @@ layout: default
       <h2 id='white-text'>{{ site.description-p1 }}</h2>
     </div>
     <div class="second-column">
-      <div class="vid-short-loop">
+      <div class="vid-short-loop animate">
         {% for post in site.categories.foreground-video-section-1 %}
         <video muted="muted" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
           <source src="{{ post.excerpt }}" type="video/mp4">
@@ -44,8 +48,6 @@ layout: default
       </div>
     </div>
   </div>
-
-
 
 <!-- Video Grid Section -->
   <div class="grid-wrapper">
@@ -98,7 +100,9 @@ layout: default
         {{ site.description-p3 }}
         </h2>
         <div class="img-container">
-          <img src="{{site.url}}/assets/images/hhf_mark_circle_web.png" alt="circle mark">
+          {% for post in site.categories.circle-image %}
+            <img src="{{ site.url }}{{ post.image }}" alt="circle mark">
+          {% endfor %}
         </div>
       </div>
     </div>
