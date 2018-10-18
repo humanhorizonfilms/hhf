@@ -1,8 +1,8 @@
 ---
-title: Water Video
+title: Background Video Section 1
 date: 2018-08-16 00:58:04 Z
 categories:
-- water-video
+- background-video-section-1
 layout: post
 excerpt_separator: "<!--more-->"
 ---

@@ -195,7 +195,7 @@ img { width: 100%;}
   position: absolute;
   width: 100%;
   overflow: hidden;
-  margin-top: 80vh;
+  margin-top: 76vh;
   @include media-query($on-tablet) {
     margin-top: 62vh;
   }
@@ -237,7 +237,6 @@ img { width: 100%;}
   }
 }
 
-
 .center {
   width: 500px;
   #window-holder {
@@ -271,6 +270,13 @@ img { width: 100%;}
     display: inline;
   }
 
+  .background-video {
+    position: absolute;
+    max-width: 100%;
+    z-index: -100;
+    overflow: hidden;
+  }
+
   #cloud-background {
     width: 100%;
     position: absolute;
@@ -282,7 +288,6 @@ img { width: 100%;}
     cursor: pointer;
     position: absolute;
     z-index: -5;
-    max-width: 95vw;
     overflow: hidden;
     @include media-query($on-tablet) {
       height: 50%;
@@ -300,6 +305,9 @@ img { width: 100%;}
   .vid-tall-loop {
     height: 80vh;
     overflow: hidden;
+    @include media-query($on-tablet) {
+      height: inherit;
+    }
     @include media-query($on-palm) {
       height: 60vh;
     }
@@ -313,6 +321,11 @@ img { width: 100%;}
         width: 250%;
       }
     }
+  }
+
+
+  #white-text {
+    color: white;
   }
 
 
@@ -338,10 +351,6 @@ img { width: 100%;}
     flex-grow: 1;
     @include media-query($on-palm) {
       width: 100%;
-    }
-
-    #white-text {
-      color: white;
     }
 
     h2 {

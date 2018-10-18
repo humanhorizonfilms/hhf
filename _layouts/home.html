@@ -24,18 +24,25 @@ layout: default
 
 <!-- Water Section -->
   <div class="two-column full-height">
-    {% for post in site.categories.water-video %}
+    <div class="background-video">
+      {% for post in site.categories.background-video-section-1 %}
+      <video muted="muted" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
+        <source src="{{ post.excerpt }}" type="video/mp4">
+        </video>
+        {% endfor %}
+      </div>
     <div class="first-column marginbottom">
-      <h2>{{ site.description-p1 }}</h2>
+      <h2 id='white-text'>{{ site.description-p1 }}</h2>
     </div>
     <div class="second-column">
-      <div class="vid-tall-loop">
+      <div class="vid-short-loop">
+        {% for post in site.categories.foreground-video-section-1 %}
         <video muted="muted" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
           <source src="{{ post.excerpt }}" type="video/mp4">
         </video>
+        {% endfor %}
       </div>
     </div>
-    {% endfor %}
   </div>
 
 
@@ -95,5 +102,4 @@ layout: default
         </div>
       </div>
     </div>
-
 </div>
