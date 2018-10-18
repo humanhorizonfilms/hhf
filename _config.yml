@@ -1,5 +1,5 @@
 ---
-title: Human Horizon Films
+title: Human Horizon Films - Staging
 timezone: UTC
 collections:
   posts:
@@ -16,8 +16,11 @@ description-p2: We believe in sharing the stories of those who serve and inspire
   to serve others.
 description-p3: We believe climate of innovation, authenticity, and meaningful change
   happens at the intersection of many diverse voices.
-baseurl: ''
-url: https://humanhorizonfilms.github.io/hhf-online
+scrolling: people change stories change people change stories change
+baseurl:
+url: https://dearnaomichan.github.io/HHF/
+facebook: https://www.facebook.com/humanhorizonfilms
+vimeo: https://vimeo.com/hhfilms
 markdown: kramdown
 theme: minima
 plugins:

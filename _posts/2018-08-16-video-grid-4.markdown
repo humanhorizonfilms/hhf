@@ -1,10 +1,10 @@
 ---
 title: Video 4 <br> 2018
-date: 2018-08-16 00:58:04 Z
+date: 2018-08-16 00:58:00 Z
 categories:
 - video-grid
-layout: post
 excerpt_separator: "<!--more-->"
+layout: post
 ---
 
 {::nomarkdown}
