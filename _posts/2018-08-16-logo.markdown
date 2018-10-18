@@ -1,7 +1,6 @@
 ---
 title: Logo
 date: 2018-08-16 00:58:00 Z
-published: false
 categories:
 - logo
 image: "/uploads/hhf_logo.png"
