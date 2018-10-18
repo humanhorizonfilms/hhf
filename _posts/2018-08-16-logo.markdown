@@ -1,9 +1,10 @@
 ---
 title: Logo
-date: 2018-08-16 00:58:04 Z
+date: 2018-08-16 00:58:00 Z
+published: false
 categories:
 - logo
+image: "/uploads/hhf_logo.png"
 layout: post
-image: "/assets/hhf_logo.png"
 ---
 
