@@ -1,8 +1,8 @@
 ---
-title: Foreground Video Section 1
+title: Section 1 Foreground Video
 date: 2018-08-16 00:58:04 Z
 categories:
-- foreground-video-section-1
+- section-1-foreground-video
 layout: post
 excerpt_separator: "<!--more-->"
 ---

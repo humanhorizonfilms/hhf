@@ -29,8 +29,8 @@ layout: default
 <!-- Water Section -->
   <div class="two-column full-height">
     <div class="background-video">
-      {% for post in site.categories.background-video-section-1 %}
-      <video muted="muted" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
+      {% for post in site.categories.section-1-background-video %}
+      <video muted="muted" poster="{{ post.image }}" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
         <source src="{{ post.excerpt }}" type="video/mp4">
         </video>
         {% endfor %}
@@ -40,7 +40,7 @@ layout: default
     </div>
     <div class="second-column animate">
       <div class="vid-short-loop">
-        {% for post in site.categories.foreground-video-section-1 %}
+        {% for post in site.categories.section-1-foreground-video %}
         <video muted="muted" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
           <source src="{{ post.excerpt }}" type="video/mp4">
         </video>

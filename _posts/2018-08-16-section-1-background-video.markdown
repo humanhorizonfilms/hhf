@@ -1,10 +1,11 @@
 ---
-title: Background Video Section 1
+title: Section 1 Background Video
 date: 2018-08-16 00:58:04 Z
 categories:
-- background-video-section-1
+- section-1-background-video
 layout: post
 excerpt_separator: "<!--more-->"
+image: "/assets/images/water-bg.jpg"
 ---
 
 {::nomarkdown}  

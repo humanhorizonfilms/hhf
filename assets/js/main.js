@@ -74,7 +74,7 @@ function draw() {
 		bubbles[i].show();
 		bubbles[i].rain();
 	}
-	
+
 	// if (frameCount % 1000 == 0) {
 	// background(0);
 	// }
