@@ -30,9 +30,10 @@ layout: default
   <div class="two-column full-height">
     <div class="background-video">
       {% for post in site.categories.section-1-background-video %}
-      <video muted="muted" poster="{{ post.image }}" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
+      <!-- <video muted="muted" poster="{{ site.url }}{{ post.image }}" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
         <source src="{{ post.excerpt }}" type="video/mp4">
-        </video>
+        </video> -->
+        <img src="{{ site.url }}{{ post.image }}" alt="">
         {% endfor %}
       </div>
     <div class="first-column marginbottom animate">
@@ -41,7 +42,7 @@ layout: default
     <div class="second-column animate">
       <div class="vid-short-loop">
         {% for post in site.categories.section-1-foreground-video %}
-        <video muted="muted" poster="{{ post.image }}" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
+        <video muted="muted" poster="{{ site.url }}{{ post.image }}" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
           <source src="{{ post.excerpt }}" type="video/mp4">
         </video>
         {% endfor %}
