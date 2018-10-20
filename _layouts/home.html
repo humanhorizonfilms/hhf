@@ -41,7 +41,7 @@ layout: default
     <div class="second-column animate">
       <div class="vid-short-loop">
         {% for post in site.categories.section-1-foreground-video %}
-        <video muted="muted" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
+        <video muted="muted" poster="{{ post.image }}" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
           <source src="{{ post.excerpt }}" type="video/mp4">
         </video>
         {% endfor %}
