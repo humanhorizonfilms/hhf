@@ -36,10 +36,10 @@ layout: default
         <img src="{{ site.url }}{{ post.image }}" alt="">
         {% endfor %}
       </div>
-    <div class="first-column marginbottom animate">
+    <div class="first-column marginbottom ">
       <h2 id='white-text'>{{ site.description-p1 }}</h2>
     </div>
-    <div class="second-column animate">
+    <div class="second-column ">
       <div class="vid-short-loop">
         {% for post in site.categories.section-1-foreground-video %}
         <video muted="muted" poster="{{ site.url }}{{ post.image }}" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
