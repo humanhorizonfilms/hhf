@@ -6,11 +6,13 @@
 
 
       <div class="center-item">
-        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-          {% for post in site.categories.logo-image %}
-            <img src="{{ site.url }}{{ post.image }}" alt="Human Horizon Films Logo">
-          {% endfor %}
-       </a>
+        <div class="img-wrapper">
+          <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+            {% for post in site.categories.logo-image %}
+              <img src="{{ site.url }}{{ post.image }}" alt="Human Horizon Films Logo">
+            {% endfor %}
+         </a>
+       </div>
       </div>
 
   </div>
