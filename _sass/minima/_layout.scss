@@ -279,6 +279,7 @@ img { width: 100%;}
     position: absolute;
     z-index: -5;
     overflow: hidden;
+    max-width: 1366px;
     @include media-query($on-tablet) {
       height: 50%;
       max-width: 100%;

@@ -35,11 +35,11 @@ layout: default
         </video>
         {% endfor %}
       </div>
-    <div class="first-column marginbottom">
+    <div class="first-column marginbottom animate">
       <h2 id='white-text'>{{ site.description-p1 }}</h2>
     </div>
-    <div class="second-column">
-      <div class="vid-short-loop animate">
+    <div class="second-column animate">
+      <div class="vid-short-loop">
         {% for post in site.categories.foreground-video-section-1 %}
         <video muted="muted" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
           <source src="{{ post.excerpt }}" type="video/mp4">
@@ -85,7 +85,7 @@ layout: default
           </video>
         </div>
       </div>
-      <div class="second-column mobile-cloud click">
+      <div class="second-column mobile-cloud click animate">
         <h2 id='white-text'>
           {{ site.description-p2 }}
         </h2>
