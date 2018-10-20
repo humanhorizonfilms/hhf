@@ -35,8 +35,8 @@
 
   img {
     padding-top: 5%;
-    width: 40vw;
-    height: auto;
+    width: auto;
+    height: 25vh;
     @include media-query($on-palm) {
       width: 90vw;
     }
