@@ -27,8 +27,8 @@ layout: default
   </div>
 
 <!-- Water Section -->
-  <div class="two-column full-height">
-    <div class="background-video">
+  <div class="two-column full-height mobile-water">
+    <div class="background-video mobile-water">
       {% for post in site.categories.section-1-background-video %}
       <!-- <video muted="muted" poster="{{ site.url }}{{ post.image }}" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>
         <source src="{{ post.excerpt }}" type="video/mp4">
@@ -36,10 +36,10 @@ layout: default
         <img src="{{ site.url }}{{ post.image }}" alt="">
         {% endfor %}
       </div>
-    <div class="first-column marginbottom ">
+    <div class="first-column marginbottom mobile-water">
       <h2 id='white-text'>{{ site.description-p1 }}</h2>
     </div>
-    <div class="second-column ">
+    <div class="second-column mobile-water">
       <div class="vid-short-loop">
         {% for post in site.categories.section-1-foreground-video %}
         <video muted="muted" poster="{{ site.url }}{{ post.image }}" alt="video of pool water in slow motion" autoplay="autoplay" playsinline loop>

@@ -196,14 +196,6 @@ img { width: 100%;}
   width: 100%;
   overflow: hidden;
   left: 0;
-  @include media-query($on-tablet) {
-    margin-top: 62vh;
-  }
-  @include media-query($on-palm) {
-    h1 {
-      font-size: 45px;
-    }
-  }
 }
 
 // hide sections
@@ -391,17 +383,28 @@ img { width: 100%;}
   }
 }
 
-
-.mobile-cloud {
-  @include media-query($on-palm) {
-    // display: none;
-  }
-}
   @include media-query($on-palm) {
     #email {
     font-size: 18px;
   }
 }
+
+.background-video.mobile-water {
+  @include media-query($on-palm) {
+    display: none;
+  }
+}
+.first-column.mobile-water {
+  @include media-query($on-palm) {
+    position: absolute;
+  }
+}
+.two-column.mobile-water {
+  @include media-query($on-palm) {
+    display: flex;
+  }
+}
+
 /**
  * Posts
  */
