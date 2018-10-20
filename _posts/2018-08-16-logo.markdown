@@ -3,7 +3,7 @@ title: Logo
 date: 2018-08-16 00:58:00 Z
 categories:
 - logo-image
-image: "/uploads/hhf_logo.png"
+image: "/uploads/hhf_logo-3ee058.png"
 layout: post
 ---
 
