@@ -18,8 +18,6 @@ description-p3: We believe climate of innovation, authenticity, and meaningful c
   happens at the intersection of many diverse voices.
 baseurl: 
 url: https://dearnaomichan.github.io/HHF/
-facebook: https://www.facebook.com/humanhorizonfilms
-vimeo: https://vimeo.com/hhfilms
 markdown: kramdown
 theme: minima
 plugins:
