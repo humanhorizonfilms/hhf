@@ -16,7 +16,7 @@ description-p2: We believe in sharing the stories of those who serve and inspire
   to serve others.
 description-p3: We believe climate of innovation, authenticity, and meaningful change
   happens at the intersection of many diverse voices.
-baseurl:
+baseurl: 
 url: https://dearnaomichan.github.io/HHF/
 markdown: kramdown
 theme: minima
