@@ -1,5 +1,5 @@
 ---
-title: Retrieve a Golden of The Midwest <br> Brand Video
+title: Retrieve a Golden of The Midwest <br>
 date: 2018-08-16 00:58:00 Z
 categories:
 - video-grid
