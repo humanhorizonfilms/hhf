@@ -258,7 +258,8 @@ img { width: 100%;}
 
   .background-video {
     position: absolute;
-    max-width: 1366px;
+    // max-width: 1366px;
+    left: 0;
     max-height: 100%;
     z-index: -100;
     overflow: hidden;
@@ -285,7 +286,7 @@ img { width: 100%;}
     position: absolute;
     z-index: -5;
     overflow: hidden;
-    max-width: 1366px;
+    // max-width: 1366px;
     @include media-query($on-tablet) {
       height: 50%;
       max-width: 100%;
