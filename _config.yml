@@ -10,12 +10,12 @@ collections:
     output: true
 email: tahiel@humanhorizonfilms.com - tahiel@humanhorizonfilms.com -
 scrolling: 
-description-p1: We empower organizations to express their service stories with emotionally
-  rich filmmaking.
-description-p2: We believe in sharing the stories of those who serve and inspire others
-  to serve others.
-description-p3: We believe climate of innovation, authenticity, and meaningful change
-  happens at the intersection of many diverse voices.
+description-p1: We empower organizations to submerge into their stories to create
+  growth and change.
+description-p2: Elevate your story and reach new audiences and go beyond the horizon.
+description-p3: |
+  Human Horizon Films is a video production company rooted in Equity, Authenticity, and Unity. We believe in video as a catalyst for change and
+  the synergy of story and service.
 baseurl: 
 url: https://dearnaomichan.github.io/HHF/
 markdown: kramdown
