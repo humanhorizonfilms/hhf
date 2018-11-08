@@ -1,5 +1,5 @@
 ---
-title: Video 3 <br> 2018
+title: Retrieve a Golden of Minnesota <br> Brand Video
 date: 2018-08-16 00:58:00 Z
 categories:
 - video-grid
