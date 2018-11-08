@@ -1,5 +1,5 @@
 ---
-title: Twin Cities Daily Planet <br> The County Commissioner
+title: Twin Cities Daily Planet <br>
 date: 2018-08-16 00:58:00 Z
 categories:
 - video-grid
