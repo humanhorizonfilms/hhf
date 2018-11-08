@@ -1,17 +1,16 @@
 ---
 title: VIDEO 1 <br> 2018
-date: 2018-08-16 00:58:04 Z
+date: 2018-08-16 00:58:00 Z
 categories:
 - video-grid
-layout: post
 excerpt_separator: "<!--more-->"
+layout: post
 ---
 
 {::nomarkdown}
-https://player.vimeo.com/video/286109621?title=0&byline=0&portrait=0
-{:/}  
+https://player.vimeo.com/external/286017860.hd.mp4?s=9b307a1f6fc93d1e259ac107b24b6fccc05cda8e&profile_id=175{:/}  
 
 <!--more-->
 {::nomarkdown}
-<img class="lazyload" data-vimeo-id="286109621" src="" alt="">
+<img class="lazyload" data-vimeo-id="286017860" src="" alt="">
 {:/}  
