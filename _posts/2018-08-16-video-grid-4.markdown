@@ -8,7 +8,7 @@ layout: post
 ---
 
 {::nomarkdown}
-https://player.vimeo.com/external/307407895.hd.mp4?s=97e52639f4ae9651f3e6a49a43de9837db14f658&profile_id=175
+https://player.vimeo.com/video/307407895?title=0&byline=0&portrait=0
 {:/}  
 
 <!--more-->
