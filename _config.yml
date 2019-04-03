@@ -10,10 +10,10 @@ collections:
     output: true
 email: hello@humanhorizonfilms.com    -    hello@humanhorizonfilms.com    -    hello@humanhorizonfilms.com    -
 scrolling: 
-description-p1: 'We submerge in your needs and make a lasting splash. '
-description-p2: Every stage of our process carefully acknowledges your highest goals
-  and the identity of your organization
-description-p3: 'Stories with a heart are forgettable. '
+description-p1: We submerge in your needs and make a lasting splash
+description-p2: Stories with a heart are forgettable
+description-p3: Expand your human horizon by reaching a new audience with stories
+  from the heart
 baseurl: 
 url: https://dearnaomichan.github.io/HHF/
 markdown: kramdown
